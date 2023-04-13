@@ -20,7 +20,8 @@ Full adder is a digital circuit used to calculate the sum of three binary bits. 
 
 Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = AB + ACin + BCin
 
- ![image](s1.png)
+ ![Screenshot 2023-04-13 120533](https://user-images.githubusercontent.com/121609342/231674369-094a0734-d10c-4dcf-b954-8e662f0fe8a7.png)
+
 
 #### Figure -01 HALF ADDER 
 
