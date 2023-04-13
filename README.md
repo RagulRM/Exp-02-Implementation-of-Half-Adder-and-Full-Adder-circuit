@@ -26,7 +26,7 @@ Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = A
 #### Figure -01 HALF ADDER 
 
 
-![image](s2.png)
+![image](https://user-images.githubusercontent.com/121609342/231674533-c46acd9e-9fe4-476d-82e5-136a97defce6.png)
 
 #### Figure -02 FULL ADDER 
 
