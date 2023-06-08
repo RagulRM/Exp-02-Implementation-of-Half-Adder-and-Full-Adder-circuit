@@ -20,13 +20,12 @@ Full adder is a digital circuit used to calculate the sum of three binary bits. 
 
 Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = AB + ACin + BCin
 
- ![Screenshot 2023-04-13 120533](https://user-images.githubusercontent.com/121609342/231674369-094a0734-d10c-4dcf-b954-8e662f0fe8a7.png)
-
+ ![image](https://user-images.githubusercontent.com/36288975/163552156-a13e5a56-c638-4110-97d9-8896907c8d25.png)
 
 #### Figure -01 HALF ADDER 
 
 
-![image](https://user-images.githubusercontent.com/121609342/231674533-c46acd9e-9fe4-476d-82e5-136a97defce6.png)
+![image](https://user-images.githubusercontent.com/36288975/163552057-b3547877-6d07-45b4-b7e0-bcfebfad9e1d.png)
 
 #### Figure -02 FULL ADDER 
 
@@ -36,60 +35,51 @@ Connect the supply (+5V) to the circuit
 Switch ON the main switch
 If the output is 1, then the led glows.
 ### 
-
-###Program:
+Program:
 ```
 /*
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: RAGUL R
-RegisterNumber:212222100040
-*/
-FULL ADDER
-
-module FullAdder(a,b,c,sum,carry);
+Developed by: S.Shanmathi
+RegisterNumber: 212222100049
+# FULL ADDER:
+module add(a,b,c,sum,carry);
 input a,b,c;
 output sum,carry;
-assign sum = ((a^b)^c);
-assign carry = ((a&b)|(b&c)|(c&a));
+assign sum =(a^b^c);
+assign carry =((a&b)|(a^b)&c);
 endmodule
-
-HALF ADDER
-
-module Adder(a,b,sum,carry);
-input a,b;
-output sum,carry;
-xor(sum,a,b);
-and(carry,a,b);
-endmodule 
-``` 
-*/Logic symbol & Truthtable
+# HALF ADDER
+module add(x,y,s,c);
+input x,y;
+output s,c;
+xor(s,x,y);
+and(c,x,y);
+endmodule
+```
+*/
+Logic symbol & Truthtable
 RTL realization
 
 ### Output:
+## RTL
+# FULL ADDER:
+![image](https://user-images.githubusercontent.com/121243595/234776534-2babd134-d77c-421c-927d-d0ff1c6e1fc2.png)
 
-### HALF ADDER
-
-### TRUTH TABLE 
-![image](https://user-images.githubusercontent.com/121609342/231674977-5adf488c-1388-4753-9512-7cfc868a3c59.png)
-
-### RTL
-![image](https://user-images.githubusercontent.com/121609342/231675013-160477f4-cb65-4eef-aa91-95bfd6a68db4.png)
+# HALF ADDER:
+![image](https://user-images.githubusercontent.com/121243595/234779032-46311d2b-d843-4352-9c87-b97e0737155d.png)
 
 ### TIMING DIAGRAM
-![image](https://user-images.githubusercontent.com/121609342/231675060-300f1038-14df-428b-bb5b-17150c820851.png)
+# FULL ADDER:
+![image](https://user-images.githubusercontent.com/121243595/234778400-d27e7d89-fee5-456a-a037-47a53c74c0fd.png)
+# HALF ADDER:
+![image](https://user-images.githubusercontent.com/121243595/234779373-0cecf3b3-9db2-4da4-bc06-32b15f837f24.png)
 
-### FULL ADDER
 
 ### TRUTH TABLE 
-![image](https://user-images.githubusercontent.com/121609342/231675144-d70b786b-690e-4ffd-9ad5-7a54097c5cc5.png)
-
-### RTL
-![image](https://user-images.githubusercontent.com/121609342/231675204-a0e69240-1e04-443e-80f0-04666b2df148.png)
-
-### TIMING DIAGRAM
-![image](https://user-images.githubusercontent.com/121609342/231675257-9c1fb508-68a8-4ef7-905e-aeb6fa6881f9.png)
-
-
+# FULL ADDER:
+![image](https://user-images.githubusercontent.com/121243595/234778696-b3334407-4c60-43f3-bd11-2c43a4ba0c33.png)
+# HALF ADDER:
+![image](https://user-images.githubusercontent.com/121243595/234780160-83b4cad7-01b7-463f-8c67-381cc5fcbc81.png)
 
 ### Result:
-Thus, a half adder and full adder circuit is designed to verify its truth table in Quartus using Verilog programming.
+Therefore,half adder and full adder is verified
